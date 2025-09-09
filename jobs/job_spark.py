@@ -17,8 +17,7 @@ def main():
         df_clima = spark.read.parquet(
             "/opt/bitnami/spark/data/input/clima_inmet_aggregated.parquet",
             header=True,
-            inferSchema=True,
-            sep=','
+            inferSchema=True
         )
         print("Dados de clima carregados:")
         df_clima.show(5)
