@@ -145,7 +145,7 @@ Agora, em qualquer outro notebook (ou no mesmo, depois de reiniciar), você pode
 
 ```python
 # Lendo diretamente da tabela que acabamos de criar
-df_direto_da_tabela = spark.sql("SELECT * FROM tabela_clima_permanente WHERE produto = 'Notebook'")
+df_direto_da_tabela = spark.sql("SELECT * FROM tabela_clima_permanente WHERE cidade = 'Belo Horizonte'")
 
 df_direto_da_tabela.show()
 ```
@@ -156,10 +156,10 @@ Após sua análise, você provavelmente vai querer salvar o resultado em um arqu
 O formato Parquet é altamente recomendado por ser otimizado para performance e compressão.
 
 ```python
-# Vamos salvar o resultado da nossa agregação (vendas por produto)
+# Vamos salvar o resultado da nossa agregação (Clima de Belo Horizonte)
 caminho_saida = "/opt/bitnami/spark/data/output/clima_agregado"
 
-df_clima.write.mode("overwrite").parquet(caminho_saida)
+df_direto_da_tabela.write.mode("overwrite").parquet(caminho_saida)
 
 print(f"Resultado salvo com sucesso em '{caminho_saida}' na sua pasta 'data/output'!")
 ```
