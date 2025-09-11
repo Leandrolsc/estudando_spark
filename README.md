@@ -4,7 +4,7 @@ Este projeto oferece um ambiente de desenvolvimento Apache Spark completo e pron
 
 ## ✨ Principais Funcionalidades
 
-* Ambiente Realista: Cluster com um nó Mestre (Master) e múltiplos nós de trabalho (Workers).
+* Ambiente Realista: Simula a arquitetura distribuída de um cluster real (Master/Workers), permitindo desenvolver código que é diretamente portável para ambientes de produção como YARN ou Kubernetes.
 
 * Desenvolvimento Interativo: Inclui um container com Jupyter Lab pré-configurado para se conectar ao cluster, ideal para análise de dados e prototipação.
 
