@@ -11,6 +11,7 @@ services:
       - ./jobs:/opt/bitnami/spark/jobs
       - ./data:/opt/bitnami/spark/data
       - spark-warehouse:/opt/bitnami/spark/spark-warehouse 
+      - ./spark/notebooks:/opt/bitnami/spark/notebooks
     environment:
       - SPARK_MODE=master
       - HOME=/opt/bitnami/spark
@@ -42,6 +43,7 @@ services:
       - ./jobs:/opt/bitnami/spark/jobs
       - ./data:/opt/bitnami/spark/data
       - spark-warehouse:/opt/bitnami/spark/spark-warehouse 
+      - ./spark/notebooks:/opt/bitnami/spark/notebooks
 
   spark-worker-2:
     build:
@@ -66,6 +68,7 @@ services:
       - ./jobs:/opt/bitnami/spark/jobs
       - ./data:/opt/bitnami/spark/data
       - spark-warehouse:/opt/bitnami/spark/spark-warehouse
+      - ./spark/notebooks:/opt/bitnami/spark/notebooks
 
   jupyter-lab:
     build:
@@ -77,6 +80,7 @@ services:
       - ./jobs:/opt/bitnami/spark/jobs
       - ./data:/opt/bitnami/spark/data
       - spark-warehouse:/opt/bitnami/spark/spark-warehouse 
+      - ./spark/notebooks:/opt/bitnami/spark/notebooks
     environment:
       - SPARK_MASTER_URL=spark://spark-master:7077
       - HOME=/opt/bitnami/spark
