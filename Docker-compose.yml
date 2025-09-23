@@ -10,7 +10,6 @@ services:
     volumes:
       - ./jobs:/opt/bitnami/spark/jobs
       - ./data:/opt/bitnami/spark/data
-      - spark-warehouse:/opt/bitnami/spark/spark-warehouse 
       - ./spark/notebooks:/opt/bitnami/spark/notebooks
     environment:
       - SPARK_MODE=master
@@ -42,7 +41,6 @@ services:
     volumes:
       - ./jobs:/opt/bitnami/spark/jobs
       - ./data:/opt/bitnami/spark/data
-      - spark-warehouse:/opt/bitnami/spark/spark-warehouse 
       - ./spark/notebooks:/opt/bitnami/spark/notebooks
 
   spark-worker-2:
@@ -67,7 +65,6 @@ services:
     volumes:
       - ./jobs:/opt/bitnami/spark/jobs
       - ./data:/opt/bitnami/spark/data
-      - spark-warehouse:/opt/bitnami/spark/spark-warehouse
       - ./spark/notebooks:/opt/bitnami/spark/notebooks
 
   jupyter-lab:
@@ -79,7 +76,6 @@ services:
     volumes:
       - ./jobs:/opt/bitnami/spark/jobs
       - ./data:/opt/bitnami/spark/data
-      - spark-warehouse:/opt/bitnami/spark/spark-warehouse 
       - ./spark/notebooks:/opt/bitnami/spark/notebooks
     environment:
       - SPARK_MASTER_URL=spark://spark-master:7077
@@ -87,6 +83,3 @@ services:
       - JUPYTER_ENABLE_LAB=yes
     command: >
       jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
-
-volumes:
-  spark-warehouse:
