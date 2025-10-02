@@ -1,16 +1,13 @@
-FROM bitnami/spark:4.0.0
+FROM spark:4.0.0-java21-python3
 
 USER root
 
-RUN apt-get update && apt-get install -y python3-pip
-COPY requirements.txt /
-RUN pip3 install --no-cache-dir -r /requirements.txt
+COPY requirements.txt /opt/spark/work-dir/
+RUN pip install --no-cache-dir -r /opt/spark/work-dir/requirements.txt
 
-RUN chown -R 1001:0 /opt/bitnami/spark/data \
-    && mkdir -p /opt/bitnami/spark/spark-warehouse \
-    && chown -R 1001:0 /opt/bitnami/spark/spark-warehouse
+RUN chown -R spark:spark /opt/spark/work-dir
 
-ENV HOME=/opt/bitnami/spark
-
-USER 1001
+#USER spark #Comentado para rodar como root
+ 
+WORKDIR /opt/spark/work-dir
 
