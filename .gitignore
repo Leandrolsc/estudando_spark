@@ -3,5 +3,6 @@ __pycache__/
 .ipynb_checkpoints/
 .vscode/
 INMET/
+INMET_PARQUET/
 scripts/
 artifacts/
