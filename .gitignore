@@ -4,5 +4,6 @@ __pycache__/
 .vscode/
 INMET/
 INMET_PARQUET/
+data/
 scripts/
 artifacts/
