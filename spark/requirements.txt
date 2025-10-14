@@ -1,6 +1,6 @@
 pyspark==4.0.0
-pandas
-jupyterlab
-unidecode
+pandas==2.3.3
+jupyterlab==4.4.9
+unidecode==1.4.0
 geopy==2.4.1
 pyarrow==21.0.0
