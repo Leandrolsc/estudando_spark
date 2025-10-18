@@ -15,13 +15,13 @@ Este projeto oferece um ambiente de desenvolvimento Apache Spark completo e pron
 
 ## 🏗️ Estrutura do Projeto
 
-Para uma melhor organização, o projeto segue a estrutura abaixo. Certifique-se de criar as pastas ``jobs`` e ``data`` antes de iniciar.
+Para uma melhor organização, o projeto segue a estrutura abaixo.
 
 ```code
 .
 ├── 🐳 docker-compose.yml   # Orquestra todos os containers do ambiente.
 ├── 📂 jobs/                 # (Crie esta pasta) Onde seus scripts (.py) e notebooks (.ipynb) devem ficar.
-├── 📂 data/                 # (Crie esta pasta) Local para armazenar datasets de entrada e saída.
+├── 📂 spark/                # (Crie esta pasta) Local para armazenar notebooks e imagem docker do spark.
 └── 📜 README.md             # Este arquivo de documentação.
 ```
 
@@ -37,15 +37,7 @@ Para uma melhor organização, o projeto segue a estrutura abaixo. Certifique-se
    cd estudando_spark
    ```
 
-3. **Crie as pastas necessárias (se ainda não existirem)**
-
-Se as pastas ``jobs`` e ``data`` não existirem, crie-as:
-
-```sh
-mkdir jobs data
-```
-
-4. **Inicie o Ambiente**
+3. **Inicie o Ambiente**
 
 Execute o comando abaixo na raiz do projeto. O ``--build`` é necessário apenas na primeira vez ou quando houver alterações nos arquivos de configuração.
 
@@ -55,7 +47,7 @@ docker-compose up --build -d
 
 O ``-d`` (detached) executa os containers em segundo plano.
 
-5. **Acesse os serviços**
+4. **Acesse os serviços**
 
 Após a inicialização, os seguintes serviços estarão disponíveis no seu navegador:
 
@@ -67,8 +59,6 @@ Após a inicialização, os seguintes serviços estarão disponíveis no seu nav
 ## Observações
 
 * O ambiente Spark está configurado para não exigir autenticação, facilitando o uso local.
-* Os dados e scripts são persistidos nas pastas ``data/`` e ``jobs/`` do host.
-
 ---
 
 Sinta-se à vontade para adaptar o ambiente conforme suas necessidades de estudo ou desenvolvimento!

@@ -19,11 +19,9 @@ from pyspark.sql.functions import col, sum, desc, year
 
 # 1. Cria e configura a SparkSession
 spark = SparkSession.builder \
-    .appName("AnaliseInterativaClima") \
-    .master("spark://spark-master:7077") \
-    .config("spark.sql.warehouse.dir", "/opt/bitnami/spark/spark-warehouse") \
-    .enableHiveSupport() \
-    .getOrCreate()
+        .appName("Processamento INMET com PySpark") \
+        .master("spark://spark-master:7077") \
+        .getOrCreate()
 
 # O que cada linha faz:
 # .appName("..."): Dá um nome para sua aplicação, que aparecerá na UI do Spark (localhost:8080).
