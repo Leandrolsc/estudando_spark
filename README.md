@@ -62,3 +62,13 @@ Após a inicialização, os seguintes serviços estarão disponíveis no seu nav
 ---
 
 Sinta-se à vontade para adaptar o ambiente conforme suas necessidades de estudo ou desenvolvimento!
+
+## Documentos importantes
+
+Afinal o que é o Apache Spark ? [Link](https://github.com/Leandrolsc/estudando_spark/blob/main/oque_e_spark.md)
+
+Explicação do projeto [Link](https://github.com/Leandrolsc/estudando_spark/blob/main/explicando_projeto.md)
+
+Como utilizar o Laboratório Spark ? [Link](https://github.com/Leandrolsc/estudando_spark/blob/main/spark_use.md)
+
+Clusters spark [Link](https://github.com/Leandrolsc/estudando_spark/blob/main/cluster_spark.md)
