@@ -69,9 +69,9 @@ Apesar de ser uma base poderosa do Spark, o uso direto de RDDs apresenta **limit
 
 ---
 
-## Exemplo de Uso (Scala)
+## Exemplo de Uso (Python)
 
-```scala
+```python
 # Criação de um RDD a partir de um arquivo de texto
 rdd = spark.sparkContext.textFile("hdfs://caminho/arquivo.txt")
 
